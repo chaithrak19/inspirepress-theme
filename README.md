@@ -116,4 +116,4 @@ Activate and customize via the WordPress Customizer.
 🧑‍💻 Author
 Chaithra K
 🔗 GitHub Profile
-📬 chaithrak19@gmail.com
+📬 chaithravalanja@gmaiil.com@gmail.com
