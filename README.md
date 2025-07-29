@@ -1,13 +1,4 @@
-✅ Step 1: Create the file
-In your theme folder (/wp-content/themes/inspirepress/), create a file named:
 
-Copy
-Edit
-README.md
-✅ Step 2: Paste this content inside it
-markdown
-Copy
-Edit
 # 🎨 InspirePress – Custom WordPress Theme
 
 **InspirePress** is a fully custom, responsive WordPress theme built from scratch for an assessment project. It’s lightweight, accessible, and powered by vanilla JavaScript — ideal for clean and fast performance.
@@ -104,11 +95,7 @@ Fields: Title, Content, Featured Image, Custom URL (meta box)
 Appears in a responsive grid with link buttons
 
 🚀 Installation
-bash
-Copy
-Edit
 git clone https://github.com/chaithrak19/inspirepress-theme.git
-Or upload ZIP through:
 Appearance → Themes → Add New → Upload
 
 Activate and customize via the WordPress Customizer.
