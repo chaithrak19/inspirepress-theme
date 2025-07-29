@@ -1,0 +1,404 @@
+/*
+Theme Name: InspirePress
+Theme URI: http://localhost/inspirepress
+Author: Your Name
+Description: A custom theme built from scratch for assessment.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: inspirepress
+*/
+
+/* ========== BASE ========== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ========== HEADER & FOOTER ========== */
+header, footer {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* ========== BUTTONS ========== */
+.inspire-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: transparent;
+    border: 2px solid #0073aa;
+    color: #0073aa;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.inspire-btn:hover {
+    background-color: #0073aa;
+    color: #fff;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #003c57;
+    margin-bottom: 30px;
+}
+
+.hero img {
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* ========== BLOG GRID ========== */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-grid article {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s;
+}
+
+.blog-grid article:hover {
+    transform: translateY(-5px);
+}
+
+.blog-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* ========== SIDEBAR ========== */
+.content-with-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.main-content {
+    flex: 1 1 70%;
+}
+
+.blog-sidebar {
+    flex: 1 1 25%;
+    background: linear-gradient(135deg, #f0f4f8, #ffffff);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 100px;
+}
+
+.blog-sidebar:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.blog-sidebar .widget {
+    margin-bottom: 30px;
+}
+
+.blog-sidebar .widget-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    border-left: 4px solid #0073aa;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.blog-sidebar a {
+    display: block;
+    color: #0073aa;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: 1px dashed #ccc;
+    transition: all 0.3s ease;
+}
+
+.blog-sidebar a:hover {
+    color: #005177;
+    padding-left: 8px;
+    background-color: #eef7ff;
+}
+
+/* ========== PROJECT ARCHIVE ========== */
+.project-archive {
+    padding: 2rem;
+    text-align: center;
+}
+
+.archive-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0073aa;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: #333;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .content-with-sidebar {
+        flex-direction: column;
+    }
+
+    .main-content,
+    .blog-sidebar {
+        flex: 1 1 100%;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .inspire-btn {
+        padding: 10px 20px;
+    }
+}
+
+/* ========== SCROLL TO TOP BUTTON ========== */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: background-color 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background-color: #005177;
+}
+
+/* ========== DARK MODE ========== */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .blog-sidebar {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+body.dark-mode a {
+    color: #66ccff;
+}
+
+body.dark-mode .inspire-btn {
+    border-color: #66ccff;
+    color: #66ccff;
+}
+
+body.dark-mode .inspire-btn:hover {
+    background-color: #66ccff;
+    color: #000;
+}
+
+/* Dark mode toggle */
+.dark-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    padding: 8px 10px;
+    border: none;
+    background: #0073aa;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* ========== ANIMATED UNDERLINE MENU ========== */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    color: #0073aa;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 0;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    background-color: #0073aa;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ========== PAGE REVEAL ANIMATION ========== */
+.page-reveal {
+    position: relative;
+    overflow: hidden;
+}
+
+.page-reveal::before,
+.page-reveal::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background: #fff;
+    z-index: 9999;
+    transition: transform 1s ease-in-out;
+}
+
+.page-reveal::before {
+    left: 0;
+    transform: translateX(0);
+}
+
+.page-reveal::after {
+    right: 0;
+    transform: translateX(0);
+}
+
+.page-reveal.revealed::before {
+    transform: translateX(-100%);
+}
+
+.page-reveal.revealed::after {
+    transform: translateX(100%);
+}
+
+/* ========== CTA Button Section ========== */
+.cta-button {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* ========== PROJECT CARD DROP-IN ANIMATION ========== */
+.fade-in-top {
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: dropFadeIn 0.7s ease forwards;
+}
+
+.project-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.project-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.project-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+.project-card:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+@keyframes dropFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
